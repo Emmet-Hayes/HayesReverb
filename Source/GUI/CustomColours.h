@@ -1,9 +1,8 @@
 #pragma once
 #include <JuceHeader.h>
 
-namespace MyColours
+namespace CustomColours
 {
-
     const juce::Colour red       { 0xffff3f3f };
     const juce::Colour blue      { 0xff6dd4ff };
     const juce::Colour cream     { 0xfff6f9e4 };
@@ -16,4 +15,4 @@ namespace MyColours
     const juce::Colour lightMagenta { 0xffffa6d6 };
     const juce::Colour lightPink    { 0xffffe5e9 };
     const juce::Colour blueishGrey  { 0xff445576 };
-} // namespace MyColours
+}

@@ -9,6 +9,7 @@ HayesReverbAudioProcessorEditor::HayesReverbAudioProcessorEditor (HayesReverbAud
     setResizable (false, true);
     getConstrainer()->setFixedAspectRatio (ratio);
     getConstrainer()->setSizeLimits (defaultWidth, defaultHeight, defaultWidth * 2, defaultHeight * 2);
+    image = juce::ImageCache::getFromMemory(BinaryData::bg_file_jpg, BinaryData::bg_file_jpgSize);
     setSize (defaultWidth, defaultHeight);
     editorContent.setSize (defaultWidth, defaultHeight);
     addAndMakeVisible (editorContent);
@@ -16,7 +17,7 @@ HayesReverbAudioProcessorEditor::HayesReverbAudioProcessorEditor (HayesReverbAud
 
 void HayesReverbAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.fillAll(juce::Colour { 0xff0e5e0e }); // dark forest green
+    g.drawImage(image, 0, 0, getWidth(), getHeight(), 0, 500, 1000, 500); 
 }
 
 void HayesReverbAudioProcessorEditor::resized()

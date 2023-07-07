@@ -4,10 +4,11 @@
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="nQxjwa" name="HayesReverb">
     <GROUP id="{8D10A769-D501-04B5-203F-25ED76FCBB86}" name="Resources">
-      <FILE id="PNvd5T" name="FuturaMedium.h" compile="0" resource="0" file="../simple-reverb/Resources/FuturaMedium.h"/>
-      <FILE id="kXFdUp" name="FreezeIcon.svg" compile="0" resource="1" file="../simple-reverb/Resources/FreezeIcon.svg"/>
-      <FILE id="RkNjbL" name="FuturaMedium.cpp" compile="1" resource="0"
-            file="../simple-reverb/Resources/FuturaMedium.cpp"/>
+      <FILE id="OI35cw" name="bg_file.jpg" compile="0" resource="1" file="Resources/bg_file.jpg"/>
+      <FILE id="XAv1NF" name="FreezeIcon.svg" compile="0" resource="1" file="Resources/FreezeIcon.svg"/>
+      <FILE id="rCHHmt" name="FuturaMedium.cpp" compile="1" resource="0"
+            file="Resources/FuturaMedium.cpp"/>
+      <FILE id="xYDHlY" name="FuturaMedium.h" compile="0" resource="0" file="Resources/FuturaMedium.h"/>
     </GROUP>
     <GROUP id="{55B3073F-F4F3-6D73-6E76-AF28216E6028}" name="Source">
       <GROUP id="{D3C546CD-0B02-A45B-52E0-33BD365BCA6E}" name="GUI">

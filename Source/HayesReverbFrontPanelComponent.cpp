@@ -3,12 +3,12 @@
 #include "GUI/CustomColours.h"
 
 EditorContent::EditorContent (HayesReverbAudioProcessor& p, juce::UndoManager& um)
-    : apvts (p.apvts), undoManager (um),
-      sizeDial  (*apvts.getParameter (ParamIDs::size),  &um),
-      dampDial  (*apvts.getParameter (ParamIDs::damp),  &um),
-      widthDial (*apvts.getParameter (ParamIDs::width), &um),
-      mixDial   (*apvts.getParameter (ParamIDs::mix),   &um),
-      freezeAttachment (*apvts.getParameter (ParamIDs::freeze), freezeButton, &um)
+:   apvts (p.apvts), undoManager (um),
+    sizeDial  (*apvts.getParameter (ParamIDs::size),  &um),
+    dampDial  (*apvts.getParameter (ParamIDs::damp),  &um),
+    widthDial (*apvts.getParameter (ParamIDs::width), &um),
+    mixDial   (*apvts.getParameter (ParamIDs::mix),   &um),
+    freezeAttachment (*apvts.getParameter (ParamIDs::freeze), freezeButton, &um)
 {
     setWantsKeyboardFocus (true);
 
@@ -22,11 +22,11 @@ EditorContent::EditorContent (HayesReverbAudioProcessor& p, juce::UndoManager& u
 void EditorContent::resized()
 {
     const juce::Rectangle<int> baseDialBounds { 0, 73, 80, 96 };
-    sizeDial.setBounds  (baseDialBounds.withX (46));
-    dampDial.setBounds  (baseDialBounds.withX (144));
-    widthDial.setBounds (baseDialBounds.withX (242));
-    mixDial.setBounds   (baseDialBounds.withX (340));
-    freezeButton.setBounds (440, 110, 68, 32);
+    sizeDial.setBounds  (baseDialBounds.withX (16));
+    dampDial.setBounds  (baseDialBounds.withX (114));
+    widthDial.setBounds (baseDialBounds.withX (212));
+    mixDial.setBounds   (baseDialBounds.withX (310));
+    freezeButton.setBounds (410, 110, 68, 32);
 }
 
 bool EditorContent::keyPressed (const juce::KeyPress& k)
@@ -41,7 +41,7 @@ bool EditorContent::keyPressed (const juce::KeyPress& k)
 
     const auto cmdShiftZ = juce::KeyPress ('z', juce::ModifierKeys::commandModifier 
                                                 | juce::ModifierKeys::shiftModifier, 0);
-
+    
     if (k == cmdShiftZ && undoManager.canRedo())
     {
         undoManager.redo();

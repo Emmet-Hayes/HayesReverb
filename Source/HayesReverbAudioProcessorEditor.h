@@ -17,7 +17,8 @@ public:
 private:
     EditorContent editorContent;
 
-    const int defaultWidth  { 560 };
+    juce::Image image;
+    const int defaultWidth  { 500 };
     const int defaultHeight { 250 };
 
     struct SharedLnf
