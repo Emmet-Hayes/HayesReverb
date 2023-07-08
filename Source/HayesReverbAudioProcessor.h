@@ -20,11 +20,6 @@ public:
     void changeProgramName(int index, const juce::String& newName) override {}
 
     void prepareToPlay(double sampleRate, int samplesPerBlock) override;
-
-#ifndef JucePlugin_PreferredChannelConfigurations
-    bool isBusesLayoutSupported(const BusesLayout& layouts) const override;
-#endif
-
     void processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
     juce::AudioProcessorEditor* createEditor() override;
     void getStateInformation (juce::MemoryBlock& destData) override;
