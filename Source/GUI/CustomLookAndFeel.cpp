@@ -1,14 +1,15 @@
-#include "EditorLnf.h"
-#include "../../Resources/FuturaMedium.h"
-#include "MyColours.h"
+#include "CustomLookAndFeel.h"
+#include "CustomColours.h"
 
-EditorLnf::EditorLnf()
+CustomLookAndFeel::CustomLookAndFeel()
 {
-    const auto futuraMediumFont = juce::Typeface::createSystemTypefaceFor (FuturaMedium::FuturaMedium_ttf, FuturaMedium::FuturaMedium_ttfSize);
-    setDefaultSansSerifTypeface (futuraMediumFont);
+    setColour(juce::Slider::thumbColourId, juce::Colours::darkmagenta);
+    setColour(juce::ComboBox::textColourId, juce::Colours::white);
+    setColour(juce::Slider::textBoxTextColourId, juce::Colours::white);
+    setColour(juce::Slider::textBoxOutlineColourId, juce::Colours::white);
 }
 
-void EditorLnf::drawCornerResizer (juce::Graphics& g, int w, int h, bool isMouseOver, bool isMouseDragging)
+void CustomLookAndFeel::drawCornerResizer (juce::Graphics& g, int w, int h, bool isMouseOver, bool isMouseDragging)
 {
     juce::ignoreUnused (isMouseDragging);
 
@@ -16,7 +17,7 @@ void EditorLnf::drawCornerResizer (juce::Graphics& g, int w, int h, bool isMouse
 
     for (float i = 0.0f; i < 1.0f; i += 0.3f)
     {
-        auto colour = isMouseOver ? MyColours::blue : MyColours::blackGrey;
+        auto colour = isMouseOver ? CustomColours::blue : CustomColours::blackGrey;
         g.setColour (colour);
 
         g.drawLine ((float) w * i,

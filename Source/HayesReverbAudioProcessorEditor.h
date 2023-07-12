@@ -26,7 +26,7 @@ private:
         SharedLnf()  { juce::LookAndFeel::setDefaultLookAndFeel (&customLookAndFeel); }
         ~SharedLnf() { juce::LookAndFeel::setDefaultLookAndFeel (nullptr); }
 
-        EditorLnf customLookAndFeel;
+        CustomLookAndFeel customLookAndFeel;
     };
 
     juce::SharedResourcePointer<SharedLnf> lnf;

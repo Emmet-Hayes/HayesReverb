@@ -13,16 +13,16 @@
     </GROUP>
     <GROUP id="{55B3073F-F4F3-6D73-6E76-AF28216E6028}" name="Source">
       <GROUP id="{D3C546CD-0B02-A45B-52E0-33BD365BCA6E}" name="GUI">
-        <FILE id="gYZ8nb" name="CustomColours.h" compile="0" resource="0" file="../simple-reverb/Source/GUI/CustomColours.h"/>
-        <FILE id="gdgve7" name="CustomLookAndFeel.cpp" compile="1" resource="0"
-              file="../simple-reverb/Source/GUI/CustomLookAndFeel.cpp"/>
-        <FILE id="nVuxSr" name="CustomLookAndFeel.h" compile="0" resource="0"
-              file="../simple-reverb/Source/GUI/CustomLookAndFeel.h"/>
-        <FILE id="pcMVUI" name="Dial.cpp" compile="1" resource="0" file="../simple-reverb/Source/GUI/Dial.cpp"/>
-        <FILE id="tCESco" name="Dial.h" compile="0" resource="0" file="../simple-reverb/Source/GUI/Dial.h"/>
-        <FILE id="LcYJUX" name="FreezeButton.cpp" compile="1" resource="0"
-              file="../simple-reverb/Source/GUI/FreezeButton.cpp"/>
-        <FILE id="kABF2u" name="FreezeButton.h" compile="0" resource="0" file="../simple-reverb/Source/GUI/FreezeButton.h"/>
+        <FILE id="fEWGPf" name="CustomColours.h" compile="0" resource="0" file="Source/GUI/CustomColours.h"/>
+        <FILE id="hVDXEC" name="CustomLookAndFeel.cpp" compile="1" resource="0"
+              file="Source/GUI/CustomLookAndFeel.cpp"/>
+        <FILE id="vywvpn" name="CustomLookAndFeel.h" compile="0" resource="0"
+              file="Source/GUI/CustomLookAndFeel.h"/>
+        <FILE id="Ck4Z7F" name="Dial.cpp" compile="1" resource="0" file="Source/GUI/Dial.cpp"/>
+        <FILE id="Gzvblz" name="Dial.h" compile="0" resource="0" file="Source/GUI/Dial.h"/>
+        <FILE id="nkpVD1" name="FreezeButton.cpp" compile="1" resource="0"
+              file="Source/GUI/FreezeButton.cpp"/>
+        <FILE id="JJ41Ls" name="FreezeButton.h" compile="0" resource="0" file="Source/GUI/FreezeButton.h"/>
       </GROUP>
       <FILE id="e22OAK" name="HayesReverbAudioProcessor.cpp" compile="1"
             resource="0" file="Source/HayesReverbAudioProcessor.cpp"/>

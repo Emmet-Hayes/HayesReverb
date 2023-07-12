@@ -20,7 +20,7 @@
 */
 
 #include "Dial.h"
-#include "MyColours.h"
+#include "CustomColours.h"
 
 Dial::TextBox::TextBox()
 {
@@ -41,7 +41,7 @@ juce::TextEditor* Dial::TextBox::createEditorComponent()
 
     ed->setJustification (juce::Justification::centred);
     ed->setColour (juce::TextEditor::backgroundColourId, juce::Colours::transparentWhite);
-    ed->setColour (juce::CaretComponent::caretColourId, MyColours::red);
+    ed->setColour (juce::CaretComponent::caretColourId, CustomColours::red);
     ed->setInputRestrictions (5, "-0123456789.");
     ed->setIndents (4, 0);
     ed->onTextChange = [&]()
@@ -73,10 +73,10 @@ Dial::Dial (juce::RangedAudioParameter& param, juce::UndoManager* um)
 
     setWantsKeyboardFocus (true);
     setRepaintsOnMouseActivity (true);
-    setColour (foregroundArcColourId, MyColours::blue);
-    setColour (backgroundArcColourId, MyColours::blackGrey);
-    setColour (needleColourId,        MyColours::midGrey);
-    setColour (borderColourId,        MyColours::grey);
+    setColour (foregroundArcColourId, CustomColours::blue);
+    setColour (backgroundArcColourId, CustomColours::blackGrey);
+    setColour (needleColourId,        CustomColours::midGrey);
+    setColour (borderColourId,        CustomColours::grey);
 
     auto range   = audioParam.getNormalisableRange();
     interval     = range.getRange().getLength() / 100.0f;
@@ -87,12 +87,12 @@ Dial::Dial (juce::RangedAudioParameter& param, juce::UndoManager* um)
     endAngle   = 3.0f * pi - pi / 6.0f;
 
     auto paramId = audioParam.getName (8);
-    setLabelColour (MyColours::grey);
+    setLabelColour (CustomColours::grey);
     label.setText (paramId, juce::NotificationType::dontSendNotification);
     label.setJustificationType (juce::Justification::centred);
     label.setInterceptsMouseClicks (false, false);
 
-    setTextBoxColour (MyColours::grey);
+    setTextBoxColour (CustomColours::grey);
     textBox.onTextChange = [&]()
     {
         auto newNormValue   = audioParam.getValueForText (textBox.getText());
