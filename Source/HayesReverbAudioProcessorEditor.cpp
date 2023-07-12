@@ -17,7 +17,7 @@ HayesReverbAudioProcessorEditor::HayesReverbAudioProcessorEditor (HayesReverbAud
 
 void HayesReverbAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.drawImage(image, 0, 0, getWidth(), getHeight(), 0, 500, 1000, 500); 
+    //g.drawImage(image, 0, 0, getWidth(), getHeight(), 0, 500, 1000, 500); 
 }
 
 void HayesReverbAudioProcessorEditor::resized()

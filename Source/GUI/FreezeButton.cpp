@@ -7,11 +7,11 @@ FreezeButton::FreezeButton() : juce::Button (juce::String{})
     setClickingTogglesState (true);
     onClick = [&]()
     {
-        freezeColour = getToggleState() ? MyColours::blue : MyColours::midGrey;
+        freezeColour = getToggleState() ? CustomColours::blue : CustomColours::midGrey;
     };
 
-    auto svg = juce::Drawable::createFromImageData (juce::BinaryData::FreezeIcon_svg, 
-                                                    juce::BinaryData::FreezeIcon_svgSize);
+    auto svg = juce::Drawable::createFromImageData (BinaryData::FreezeIcon_svg, 
+                                                    BinaryData::FreezeIcon_svgSize);
     jassert (svg != nullptr);
 
     if (svg != nullptr)
@@ -26,8 +26,6 @@ void FreezeButton::resized()
 
 void FreezeButton::paint (juce::Graphics& g)
 {
-    g.fillAll (MyColours::black);
-
     g.setColour (freezeColour);
     g.fillPath (freezeIconPath);
 }
