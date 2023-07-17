@@ -6,10 +6,10 @@
 #include "GUI/FreezeButton.h"
 
 
-class EditorContent  : public juce::Component
+class HayesReverbFrontPanelComponent : public juce::Component
 {
 public:
-    EditorContent (HayesReverbAudioProcessor& p, juce::UndoManager& um);
+    HayesReverbFrontPanelComponent (HayesReverbAudioProcessor& p, juce::UndoManager& um);
     
     void resized() override;
 
@@ -18,7 +18,7 @@ public:
 private:
     juce::AudioProcessorValueTreeState& apvts;
     juce::UndoManager& undoManager;
-    
+
     Dial sizeDial;
     Dial dampDial;
     Dial widthDial;
@@ -28,5 +28,5 @@ private:
 
     juce::ButtonParameterAttachment freezeAttachment;
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (EditorContent)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (HayesReverbFrontPanelComponent)
 };

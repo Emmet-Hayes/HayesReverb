@@ -11,12 +11,11 @@ public:
     void paint (juce::Graphics& g) override;
     void resized () override;
 
-    void mouseDown (const juce::MouseEvent& event) override;
-    void mouseUp (const juce::MouseEvent& event) override;
-
     void paintButton (juce::Graphics& g, 
                       bool shouldDrawButtonAsHighlighted,
                       bool shouldDrawButtonAsDown) override;
+    void mouseDown(const juce::MouseEvent& e) override;
+    void mouseUp(const juce::MouseEvent& e) override;
 
 private:
     juce::Path freezeIconPath;

@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="m3lzhO" name="HayesReverb" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              companyName="EmmetSoft">
+              companyName="EmmetSoft" defines="JUCE_MODAL_LOOPS_PERMITTED=1">
   <MAINGROUP id="nQxjwa" name="HayesReverb">
     <GROUP id="{8D10A769-D501-04B5-203F-25ED76FCBB86}" name="Resources">
       <FILE id="OI35cw" name="bg_file.jpg" compile="0" resource="1" file="Resources/bg_file.jpg"/>
@@ -37,6 +37,12 @@
       <FILE id="oKmmJj" name="HayesReverbFrontPanelComponent.h" compile="0"
             resource="0" file="Source/HayesReverbFrontPanelComponent.h"/>
       <FILE id="N9ixcF" name="ParamIDs.h" compile="0" resource="0" file="Source/ParamIDs.h"/>
+      <FILE id="Q39wWU" name="PresetBar.cpp" compile="1" resource="0" file="Source/PresetBar.cpp"/>
+      <FILE id="mNAgI8" name="PresetBar.h" compile="0" resource="0" file="Source/PresetBar.h"/>
+      <FILE id="A5l6JP" name="PresetComboBox.cpp" compile="1" resource="0"
+            file="Source/PresetComboBox.cpp"/>
+      <FILE id="lNzBqz" name="PresetComboBox.h" compile="0" resource="0"
+            file="Source/PresetComboBox.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>

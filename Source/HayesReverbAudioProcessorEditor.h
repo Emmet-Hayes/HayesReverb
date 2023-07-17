@@ -4,6 +4,7 @@
 #include "HayesReverbAudioProcessor.h"
 #include "HayesReverbFrontPanelComponent.h"
 #include "GUI/CustomLookAndFeel.h"
+#include "PresetBar.h"
 
 class HayesReverbAudioProcessorEditor  : public juce::AudioProcessorEditor
 {
@@ -15,8 +16,8 @@ public:
     void resized() override;
 
 private:
-    EditorContent editorContent;
-
+    HayesReverbFrontPanelComponent editorContent;
+    PresetBar presetBar;
     juce::Image image;
     const int defaultWidth  { 500 };
     const int defaultHeight { 250 };

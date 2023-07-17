@@ -2,7 +2,7 @@
 #include "ParamIDs.h"
 #include "GUI/CustomColours.h"
 
-EditorContent::EditorContent (HayesReverbAudioProcessor& p, juce::UndoManager& um)
+HayesReverbFrontPanelComponent::HayesReverbFrontPanelComponent (HayesReverbAudioProcessor& p, juce::UndoManager& um)
 :   apvts (p.apvts), undoManager (um),
     sizeDial  (*apvts.getParameter (ParamIDs::size),  &um),
     dampDial  (*apvts.getParameter (ParamIDs::damp),  &um),
@@ -19,7 +19,7 @@ EditorContent::EditorContent (HayesReverbAudioProcessor& p, juce::UndoManager& u
     addAndMakeVisible (freezeButton);
 }
 
-void EditorContent::resized()
+void HayesReverbFrontPanelComponent::resized()
 {
     const juce::Rectangle<int> baseDialBounds { 0, 73, 80, 96 };
     sizeDial.setBounds  (baseDialBounds.withX (16));
@@ -29,7 +29,7 @@ void EditorContent::resized()
     freezeButton.setBounds (410, 110, 68, 32);
 }
 
-bool EditorContent::keyPressed (const juce::KeyPress& k)
+bool HayesReverbFrontPanelComponent::keyPressed (const juce::KeyPress& k)
 {
     const auto cmdZ = juce::KeyPress ('z', juce::ModifierKeys::commandModifier, 0);
 
