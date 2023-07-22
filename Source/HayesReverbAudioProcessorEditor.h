@@ -3,10 +3,11 @@
 #include <JuceHeader.h>
 #include "HayesReverbAudioProcessor.h"
 #include "HayesReverbFrontPanelComponent.h"
-#include "GUI/CustomLookAndFeel.h"
-#include "PresetBar.h"
+#include "../../Common/BaseAudioProcessorEditor.h"
+#include "../../Common/CustomLookAndFeel.h"
+#include "../../Common/PresetBar.h"
 
-class HayesReverbAudioProcessorEditor  : public juce::AudioProcessorEditor
+class HayesReverbAudioProcessorEditor  : public BaseAudioProcessorEditor
 {
 public:
     HayesReverbAudioProcessorEditor (HayesReverbAudioProcessor&, 

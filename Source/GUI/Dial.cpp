@@ -325,7 +325,7 @@ void Dial::drawBorder (juce::Graphics& g)
     auto radian = 0.0f;
 
     // Draw in clockwise order, starting from top left.
-    for (const auto corner : { bounds.getTopLeft(), bounds.getTopRight(), bounds.getBottomRight(), bounds.getBottomLeft() })
+    for (const auto& corner : { bounds.getTopLeft(), bounds.getTopRight(), bounds.getBottomRight(), bounds.getBottomLeft() })
     {
         juce::Path path;
 

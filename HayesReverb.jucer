@@ -2,7 +2,8 @@
 
 <JUCERPROJECT id="m3lzhO" name="HayesReverb" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              companyName="EmmetSoft" defines="JUCE_MODAL_LOOPS_PERMITTED=1">
+              companyName="EmmetSoft" defines="JUCE_MODAL_LOOPS_PERMITTED=1"
+              pluginFormats="buildAU,buildLV2,buildStandalone,buildVST3">
   <MAINGROUP id="nQxjwa" name="HayesReverb">
     <GROUP id="{8D10A769-D501-04B5-203F-25ED76FCBB86}" name="Resources">
       <FILE id="OI35cw" name="bg_file.jpg" compile="0" resource="1" file="Resources/bg_file.jpg"/>
@@ -12,12 +13,28 @@
       <FILE id="xYDHlY" name="FuturaMedium.h" compile="0" resource="0" file="Resources/FuturaMedium.h"/>
     </GROUP>
     <GROUP id="{55B3073F-F4F3-6D73-6E76-AF28216E6028}" name="Source">
+      <GROUP id="{BE5C7E5E-91A8-A194-686B-D8F93F5F2026}" name="Common">
+        <FILE id="p5vN3O" name="BaseAudioProcessor.cpp" compile="1" resource="0"
+              file="../Common/BaseAudioProcessor.cpp"/>
+        <FILE id="BBGAw4" name="BaseAudioProcessor.h" compile="0" resource="0"
+              file="../Common/BaseAudioProcessor.h"/>
+        <FILE id="AqgP3B" name="BaseAudioProcessorEditor.cpp" compile="1" resource="0"
+              file="../Common/BaseAudioProcessorEditor.cpp"/>
+        <FILE id="Vu4XET" name="BaseAudioProcessorEditor.h" compile="0" resource="0"
+              file="../Common/BaseAudioProcessorEditor.h"/>
+        <FILE id="tEWhCF" name="CustomLookAndFeel.cpp" compile="1" resource="0"
+              file="../Common/CustomLookAndFeel.cpp"/>
+        <FILE id="J2omQ2" name="CustomLookAndFeel.h" compile="0" resource="0"
+              file="../Common/CustomLookAndFeel.h"/>
+        <FILE id="nHfbnA" name="PresetBar.cpp" compile="1" resource="0" file="../Common/PresetBar.cpp"/>
+        <FILE id="c4N7Rv" name="PresetBar.h" compile="0" resource="0" file="../Common/PresetBar.h"/>
+        <FILE id="w9AXtc" name="PresetComboBox.cpp" compile="1" resource="0"
+              file="../Common/PresetComboBox.cpp"/>
+        <FILE id="xs68q9" name="PresetComboBox.h" compile="0" resource="0"
+              file="../Common/PresetComboBox.h"/>
+      </GROUP>
       <GROUP id="{D3C546CD-0B02-A45B-52E0-33BD365BCA6E}" name="GUI">
         <FILE id="fEWGPf" name="CustomColours.h" compile="0" resource="0" file="Source/GUI/CustomColours.h"/>
-        <FILE id="hVDXEC" name="CustomLookAndFeel.cpp" compile="1" resource="0"
-              file="Source/GUI/CustomLookAndFeel.cpp"/>
-        <FILE id="vywvpn" name="CustomLookAndFeel.h" compile="0" resource="0"
-              file="Source/GUI/CustomLookAndFeel.h"/>
         <FILE id="Ck4Z7F" name="Dial.cpp" compile="1" resource="0" file="Source/GUI/Dial.cpp"/>
         <FILE id="Gzvblz" name="Dial.h" compile="0" resource="0" file="Source/GUI/Dial.h"/>
         <FILE id="nkpVD1" name="FreezeButton.cpp" compile="1" resource="0"
@@ -37,12 +54,6 @@
       <FILE id="oKmmJj" name="HayesReverbFrontPanelComponent.h" compile="0"
             resource="0" file="Source/HayesReverbFrontPanelComponent.h"/>
       <FILE id="N9ixcF" name="ParamIDs.h" compile="0" resource="0" file="Source/ParamIDs.h"/>
-      <FILE id="Q39wWU" name="PresetBar.cpp" compile="1" resource="0" file="Source/PresetBar.cpp"/>
-      <FILE id="mNAgI8" name="PresetBar.h" compile="0" resource="0" file="Source/PresetBar.h"/>
-      <FILE id="A5l6JP" name="PresetComboBox.cpp" compile="1" resource="0"
-            file="Source/PresetComboBox.cpp"/>
-      <FILE id="lNzBqz" name="PresetComboBox.h" compile="0" resource="0"
-            file="Source/PresetComboBox.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>

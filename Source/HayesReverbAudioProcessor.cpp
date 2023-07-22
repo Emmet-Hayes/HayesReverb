@@ -2,7 +2,31 @@
 #include "HayesReverbAudioProcessorEditor.h"
 #include "ParamIDs.h"
 
-static juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout()
+
+HayesReverbAudioProcessor::HayesReverbAudioProcessor()
+:   BaseAudioProcessor { createParameterLayout() }
+{
+    auto storeFloatParam = [&apvts = this->apvts](auto& param, const auto& paramID)
+    {
+        param = dynamic_cast<juce::AudioParameterFloat*> (apvts.getParameter (paramID));
+        jassert (param != nullptr);
+    };
+
+    storeFloatParam (size,  ParamIDs::size); 
+    storeFloatParam (damp,  ParamIDs::damp); 
+    storeFloatParam (width, ParamIDs::width); 
+    storeFloatParam (mix,   ParamIDs::mix); 
+
+    auto storeBoolParam = [&apvts = this->apvts](auto& param, const auto& paramID)
+    {
+        param = dynamic_cast<juce::AudioParameterBool*> (apvts.getParameter (paramID));
+        jassert (param != nullptr);
+    };
+
+    storeBoolParam (freeze, ParamIDs::freeze); 
+}
+
+juce::AudioProcessorValueTreeState::ParameterLayout HayesReverbAudioProcessor::createParameterLayout()
 {
     juce::AudioProcessorValueTreeState::ParameterLayout layout;
 
@@ -52,35 +76,13 @@ static juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout
                                                              percentFormat,
                                                              nullptr));
 
-    layout.add (std::make_unique<juce::AudioParameterBool> (juce::ParameterID { ParamIDs::freeze, 1 }, 
-                                                            ParamIDs::freeze, 
+    layout.add (std::make_unique<juce::AudioParameterBool> (juce::ParameterID { ParamIDs::freeze, 1 },
+                                                            ParamIDs::freeze,
                                                             false));
 
     return layout;
 }
 
-HayesReverbAudioProcessor::HayesReverbAudioProcessor()
-:   apvts (*this, &undoManager, "Parameters", createParameterLayout())  
-{
-    auto storeFloatParam = [&apvts = this->apvts](auto& param, const auto& paramID)
-    {
-        param = dynamic_cast<juce::AudioParameterFloat*> (apvts.getParameter (paramID));
-        jassert (param != nullptr);
-    };
-
-    storeFloatParam (size,  ParamIDs::size); 
-    storeFloatParam (damp,  ParamIDs::damp); 
-    storeFloatParam (width, ParamIDs::width); 
-    storeFloatParam (mix,   ParamIDs::mix); 
-
-    auto storeBoolParam = [&apvts = this->apvts](auto& param, const auto& paramID)
-    {
-        param = dynamic_cast<juce::AudioParameterBool*> (apvts.getParameter (paramID));
-        jassert (param != nullptr);
-    };
-
-    storeBoolParam (freeze, ParamIDs::freeze); 
-}
 
 void HayesReverbAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
@@ -119,21 +121,6 @@ void HayesReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, 
 juce::AudioProcessorEditor* HayesReverbAudioProcessor::createEditor()
 {
     return new HayesReverbAudioProcessorEditor (*this, undoManager);
-}
-
-void HayesReverbAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
-{
-    juce::MemoryOutputStream mos (destData, true);
-    apvts.state.writeToStream (mos);
-}
-
-void HayesReverbAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
-{
-    auto tree = juce::ValueTree::readFromData (data,
-                                               static_cast<size_t> (sizeInBytes));
-
-    if (tree.isValid())
-        apvts.replaceState (tree);
 }
 
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()

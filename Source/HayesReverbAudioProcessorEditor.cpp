@@ -2,7 +2,7 @@
 #include "HayesReverbAudioProcessorEditor.h"
 
 HayesReverbAudioProcessorEditor::HayesReverbAudioProcessorEditor (HayesReverbAudioProcessor& p, juce::UndoManager& um)
-:   AudioProcessorEditor { &p }
+:   BaseAudioProcessorEditor { p }
 ,   editorContent        { p, um }
 ,   presetBar            { p }
 {
