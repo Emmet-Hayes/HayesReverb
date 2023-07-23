@@ -1,6 +1,6 @@
 # HayesReverb
-A simple reverb audio plug-in written in JUCE. It interacts with the juce::dsp reverb processor provided by the framework.
-The user can control the size, the damp-ness, width, and mix of the reverb in their signal, plus a freeze switch for emulating
-a sustain stompbox.
+A free, open-source convolution reverb audio plug-in.
+It allows users to control the size, damp-ness, width, and mix of the reverb in their signal, plus a freeze button that perpetuates the 
+reverb tail into an infinite loop.
 
 ![alt text](Resources/ReverbGUI.png)
