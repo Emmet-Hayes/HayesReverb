@@ -108,8 +108,16 @@ void HayesReverbAudioProcessor::updateReverbParams()
 
 void HayesReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
-    juce::ignoreUnused (midiMessages);
     juce::ScopedNoDenormals noDenormals;
+    const auto totalNumInputChannels = getTotalNumInputChannels();
+    const auto totalNumOutputChannels = getTotalNumOutputChannels();
+    const auto numSamples = buffer.getNumSamples();
+
+    // Clear buffer
+    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+        buffer.clear(i, 0, numSamples);
+    
+    juce::ignoreUnused (midiMessages);
 
     updateReverbParams();
 
