@@ -3,22 +3,21 @@
 <JUCERPROJECT id="m3lzhO" name="HayesReverb" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
               companyName="EmmetSoft" defines="JUCE_MODAL_LOOPS_PERMITTED=1"
-              pluginFormats="buildAU,buildLV2,buildStandalone,buildVST3">
+              pluginFormats="buildAU,buildVST3">
   <MAINGROUP id="nQxjwa" name="HayesReverb">
     <GROUP id="{8D10A769-D501-04B5-203F-25ED76FCBB86}" name="Resources">
       <GROUP id="{119054C1-BECC-152E-6AEF-85367422C619}" name="Drawables">
         <FILE id="w3wwMz" name="FreezeIcon.svg" compile="0" resource="1" file="Resources/Drawables/FreezeIcon.svg"/>
-      </GROUP>
-      <GROUP id="{0E925AEB-31B5-EF94-4350-063DA421F375}" name="Fonts">
-        <FILE id="FWcuar" name="FuturaMedium.cpp" compile="1" resource="0"
-              file="Resources/Fonts/FuturaMedium.cpp"/>
-        <FILE id="H5ES6i" name="FuturaMedium.h" compile="0" resource="0" file="Resources/Fonts/FuturaMedium.h"/>
       </GROUP>
       <GROUP id="{954F4332-1B66-4E8D-6BFE-00BD3C0534D6}" name="Images">
         <FILE id="QIiImY" name="bg_file.jpg" compile="0" resource="1" file="Resources/Images/bg_file.jpg"/>
       </GROUP>
     </GROUP>
     <GROUP id="{BE5C7E5E-91A8-A194-686B-D8F93F5F2026}" name="Common">
+      <GROUP id="{07178435-7D1E-921E-52EF-6136C6172201}" name="Fonts">
+        <FILE id="QzveEg" name="Juliafont-Regular.ttf" compile="0" resource="1"
+              file="../Common/Fonts/Juliafont-Regular.ttf"/>
+      </GROUP>
       <FILE id="p5vN3O" name="BaseAudioProcessor.cpp" compile="1" resource="0"
             file="../Common/BaseAudioProcessor.cpp"/>
       <FILE id="BBGAw4" name="BaseAudioProcessor.h" compile="0" resource="0"

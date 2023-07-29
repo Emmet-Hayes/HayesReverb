@@ -4,12 +4,12 @@
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{93951FDE-7122-4745-90CE-EBB71DD44D28}}
+AppId={{93951FDE-7122-4745-90CE-EBB71DD44D27}}
 AppName=HayesReverb
 AppVersion=1.0.0
-DefaultDirName={pf64}\Common Files\VST3\HayesReverb\VST3
+DefaultDirName={commonpf64}\Common Files\VST3\HayesReverb\VST3
 DefaultGroupName=EmmetSoft
-OutputDir=userdocs:HayesInstallers
+OutputDir=userdocs:HayesPlugins\HayesInstallers
 OutputBaseFilename=HayesReverbInstaller
 Compression=lzma
 SolidCompression=yes
