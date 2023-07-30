@@ -26,10 +26,13 @@
             file="../Common/BaseAudioProcessorEditor.cpp"/>
       <FILE id="Vu4XET" name="BaseAudioProcessorEditor.h" compile="0" resource="0"
             file="../Common/BaseAudioProcessorEditor.h"/>
+      <FILE id="Op0atZ" name="CustomColours.h" compile="0" resource="0" file="../Common/CustomColours.h"/>
       <FILE id="tEWhCF" name="CustomLookAndFeel.cpp" compile="1" resource="0"
             file="../Common/CustomLookAndFeel.cpp"/>
       <FILE id="J2omQ2" name="CustomLookAndFeel.h" compile="0" resource="0"
             file="../Common/CustomLookAndFeel.h"/>
+      <FILE id="okyJQw" name="Dial.cpp" compile="1" resource="0" file="../Common/Dial.cpp"/>
+      <FILE id="rLdJTf" name="Dial.h" compile="0" resource="0" file="../Common/Dial.h"/>
       <FILE id="nHfbnA" name="PresetBar.cpp" compile="1" resource="0" file="../Common/PresetBar.cpp"/>
       <FILE id="c4N7Rv" name="PresetBar.h" compile="0" resource="0" file="../Common/PresetBar.h"/>
       <FILE id="w9AXtc" name="PresetComboBox.cpp" compile="1" resource="0"
@@ -40,8 +43,6 @@
     <GROUP id="{55B3073F-F4F3-6D73-6E76-AF28216E6028}" name="Source">
       <GROUP id="{D3C546CD-0B02-A45B-52E0-33BD365BCA6E}" name="GUI">
         <FILE id="fEWGPf" name="CustomColours.h" compile="0" resource="0" file="Source/GUI/CustomColours.h"/>
-        <FILE id="Ck4Z7F" name="Dial.cpp" compile="1" resource="0" file="Source/GUI/Dial.cpp"/>
-        <FILE id="Gzvblz" name="Dial.h" compile="0" resource="0" file="Source/GUI/Dial.h"/>
         <FILE id="nkpVD1" name="FreezeButton.cpp" compile="1" resource="0"
               file="Source/GUI/FreezeButton.cpp"/>
         <FILE id="JJ41Ls" name="FreezeButton.h" compile="0" resource="0" file="Source/GUI/FreezeButton.h"/>

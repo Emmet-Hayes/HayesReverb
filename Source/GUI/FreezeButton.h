@@ -1,7 +1,7 @@
 #pragma once
 
 #include "JuceHeader.h"
-#include "CustomColours.h"
+#include "../../Common/CustomColours.h"
 
 class FreezeButton  : public juce::Button
 {

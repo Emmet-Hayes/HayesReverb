@@ -26,6 +26,6 @@ void HayesReverbAudioProcessorEditor::paint (juce::Graphics& g)
 void HayesReverbAudioProcessorEditor::resized()
 {
     const auto factor = static_cast<float> (getWidth()) / defaultWidth;
-    presetBar.setBounds(0, 0, 500 * factor, 20 * factor);
+    presetBar.setBounds(0, 0, static_cast<int>(500 * factor), static_cast<int>(20 * factor));
     editorContent.setTransform (juce::AffineTransform::scale (factor));
 }

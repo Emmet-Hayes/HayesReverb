@@ -1,6 +1,6 @@
 #include "HayesReverbFrontPanelComponent.h"
 #include "ParamIDs.h"
-#include "GUI/CustomColours.h"
+#include "../../Common/CustomColours.h"
 
 HayesReverbFrontPanelComponent::HayesReverbFrontPanelComponent (HayesReverbAudioProcessor& p, juce::UndoManager& um)
 :   apvts (p.apvts), undoManager (um),

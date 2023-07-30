@@ -2,7 +2,7 @@
 
 #include <JuceHeader.h>
 #include "HayesReverbAudioProcessor.h"
-#include "GUI/Dial.h"
+#include "../../Common/Dial.h"
 #include "GUI/FreezeButton.h"
 
 
