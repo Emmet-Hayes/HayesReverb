@@ -33,6 +33,7 @@
             file="../Common/CustomLookAndFeel.h"/>
       <FILE id="okyJQw" name="Dial.cpp" compile="1" resource="0" file="../Common/Dial.cpp"/>
       <FILE id="rLdJTf" name="Dial.h" compile="0" resource="0" file="../Common/Dial.h"/>
+      <FILE id="PMiihX" name="PercentSlider.h" compile="0" resource="0" file="../Common/PercentSlider.h"/>
       <FILE id="nHfbnA" name="PresetBar.cpp" compile="1" resource="0" file="../Common/PresetBar.cpp"/>
       <FILE id="c4N7Rv" name="PresetBar.h" compile="0" resource="0" file="../Common/PresetBar.h"/>
       <FILE id="w9AXtc" name="PresetComboBox.cpp" compile="1" resource="0"

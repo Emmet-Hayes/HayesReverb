@@ -2,7 +2,8 @@
 
 #include <JuceHeader.h>
 #include "HayesReverbAudioProcessor.h"
-#include "../../Common/Dial.h"
+#include "../../Common/PercentSlider.h"
+#include "../../Common/CustomLookAndFeel.h"
 #include "GUI/FreezeButton.h"
 
 
@@ -19,14 +20,21 @@ private:
     juce::AudioProcessorValueTreeState& apvts;
     juce::UndoManager& undoManager;
 
-    Dial sizeDial;
-    Dial dampDial;
-    Dial widthDial;
-    Dial mixDial;
+    CustomLookAndFeel customLookAndFeel;
 
+    PercentSlider sizeDial;
+    PercentSlider dampDial;
+    PercentSlider widthDial;
+    PercentSlider mixDial;
     FreezeButton freezeButton;
 
+    juce::Label sizeLabel, dampLabel, widthLabel, mixLabel;
+
     juce::ButtonParameterAttachment freezeAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> sizeAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> dampAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> widthAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> mixAttachment;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (HayesReverbFrontPanelComponent)
 };
