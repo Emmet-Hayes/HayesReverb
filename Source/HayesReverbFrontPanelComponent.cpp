@@ -19,10 +19,10 @@ HayesReverbFrontPanelComponent::HayesReverbFrontPanelComponent (HayesReverbAudio
     addAndMakeVisible(widthLabel);
     addAndMakeVisible(mixLabel);
 
-    sizeDial.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    dampDial.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    widthDial.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    mixDial.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    sizeDial.setSliderStyle(juce::Slider::Rotary);
+    dampDial.setSliderStyle(juce::Slider::Rotary);
+    widthDial.setSliderStyle(juce::Slider::Rotary);
+    mixDial.setSliderStyle(juce::Slider::Rotary);
 
     sizeDial.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 70, 20);
     dampDial.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 70, 20);
