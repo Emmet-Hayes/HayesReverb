@@ -1,4 +1,5 @@
 #include "HayesReverbFrontPanelComponent.h"
+#include "HayesReverbAudioProcessorEditor.h"
 #include "ParamIDs.h"
 #include "../../Common/CustomColours.h"
 
@@ -45,16 +46,25 @@ HayesReverbFrontPanelComponent::HayesReverbFrontPanelComponent (HayesReverbAudio
 
 void HayesReverbFrontPanelComponent::resized()
 {
-    const juce::Rectangle<int> baseDialBounds { 0, 95, 80, 80 };
-    sizeLabel.setBounds(baseDialBounds.withX(41).withY(50));
-    sizeDial.setBounds  (baseDialBounds.withX (16));
-    dampLabel.setBounds(baseDialBounds.withX(134).withY(50));
-    dampDial.setBounds  (baseDialBounds.withX (114));
-    widthLabel.setBounds(baseDialBounds.withX(232).withY(50));
-    widthDial.setBounds (baseDialBounds.withX (212));
-    mixLabel.setBounds(baseDialBounds.withX(335).withY(50));
-    mixDial.setBounds   (baseDialBounds.withX (310));
-    freezeButton.setBounds (410, 110, 68, 32);
+    const auto scale = static_cast<float> (getWidth()) / HayesReverbAudioProcessorEditor::defaultWidth;
+
+    auto setBoundsAndApplyScaling = [&](juce::Component* component, int x, int y, int w, int h, bool isSlider = false)
+    {
+        component->setBounds(static_cast<int>(x * scale), static_cast<int>(y * scale),
+            static_cast<int>(w * scale), static_cast<int>(h * scale));
+        if (isSlider)
+            dynamic_cast<juce::Slider*>(component)->setTextBoxStyle(juce::Slider::TextBoxBelow, false, static_cast<int>(70 * scale), static_cast<int>(20 * scale));
+    };
+    
+    setBoundsAndApplyScaling(&sizeLabel, 41, 60, 70, 20);
+    setBoundsAndApplyScaling(&sizeDial, 16, 95, 80, 80, true);
+    setBoundsAndApplyScaling(&dampLabel, 134, 60, 70, 20);
+    setBoundsAndApplyScaling(&dampDial, 114, 95, 80, 80, true);
+    setBoundsAndApplyScaling(&widthLabel, 232, 60, 70, 20);
+    setBoundsAndApplyScaling(&widthDial, 212, 95, 80, 80, true);
+    setBoundsAndApplyScaling(&mixLabel, 335, 60, 70, 20);
+    setBoundsAndApplyScaling(&mixDial, 310, 95, 80, 80, true);
+    setBoundsAndApplyScaling(&freezeButton, 410, 110, 68, 32);
 }
 
 bool HayesReverbFrontPanelComponent::keyPressed (const juce::KeyPress& k)

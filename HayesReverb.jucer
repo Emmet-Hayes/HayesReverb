@@ -43,7 +43,6 @@
     </GROUP>
     <GROUP id="{55B3073F-F4F3-6D73-6E76-AF28216E6028}" name="Source">
       <GROUP id="{D3C546CD-0B02-A45B-52E0-33BD365BCA6E}" name="GUI">
-        <FILE id="fEWGPf" name="CustomColours.h" compile="0" resource="0" file="Source/GUI/CustomColours.h"/>
         <FILE id="nkpVD1" name="FreezeButton.cpp" compile="1" resource="0"
               file="Source/GUI/FreezeButton.cpp"/>
         <FILE id="JJ41Ls" name="FreezeButton.h" compile="0" resource="0" file="Source/GUI/FreezeButton.h"/>

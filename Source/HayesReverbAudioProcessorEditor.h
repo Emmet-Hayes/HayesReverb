@@ -16,12 +16,14 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
+    static constexpr int defaultWidth  { 500 };
+    static constexpr int defaultHeight { 250 };
+
 private:
     HayesReverbFrontPanelComponent editorContent;
     PresetBar presetBar;
     juce::Image image;
-    const int defaultWidth  { 500 };
-    const int defaultHeight { 250 };
+
 
     struct SharedLnf
     {
