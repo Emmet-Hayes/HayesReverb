@@ -55,10 +55,6 @@
             resource="0" file="Source/HayesReverbAudioProcessorEditor.cpp"/>
       <FILE id="SOY2G7" name="HayesReverbAudioProcessorEditor.h" compile="0"
             resource="0" file="Source/HayesReverbAudioProcessorEditor.h"/>
-      <FILE id="xXhL0o" name="HayesReverbFrontPanelComponent.cpp" compile="1"
-            resource="0" file="Source/HayesReverbFrontPanelComponent.cpp"/>
-      <FILE id="oKmmJj" name="HayesReverbFrontPanelComponent.h" compile="0"
-            resource="0" file="Source/HayesReverbFrontPanelComponent.h"/>
       <FILE id="N9ixcF" name="ParamIDs.h" compile="0" resource="0" file="Source/ParamIDs.h"/>
     </GROUP>
   </MAINGROUP>

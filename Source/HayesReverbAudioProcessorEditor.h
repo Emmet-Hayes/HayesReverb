@@ -2,16 +2,19 @@
 
 #include <JuceHeader.h>
 #include "HayesReverbAudioProcessor.h"
-#include "HayesReverbFrontPanelComponent.h"
 #include "../../Common/BaseAudioProcessorEditor.h"
 #include "../../Common/CustomLookAndFeel.h"
 #include "../../Common/PresetBar.h"
+#include "../../Common/PercentSlider.h"
+#include "GUI/FreezeButton.h"
+#include "ParamIDs.h"
 
 class HayesReverbAudioProcessorEditor  : public BaseAudioProcessorEditor
 {
 public:
     HayesReverbAudioProcessorEditor (HayesReverbAudioProcessor&, 
                                       juce::UndoManager& um);
+    ~HayesReverbAudioProcessorEditor();
 
     void paint (juce::Graphics&) override;
     void resized() override;
@@ -20,20 +23,27 @@ public:
     static constexpr int defaultHeight { 250 };
 
 private:
-    HayesReverbFrontPanelComponent editorContent;
+    CustomLookAndFeel customLookAndFeel;
+
+    HayesReverbAudioProcessor& processor;
+  
     PresetBar presetBar;
+    
     juce::Image image;
 
+    PercentSlider sizeDial;
+    PercentSlider dampDial;
+    PercentSlider widthDial;
+    PercentSlider mixDial;
+    FreezeButton freezeButton;
 
-    struct SharedLnf
-    {
-        SharedLnf()  { juce::LookAndFeel::setDefaultLookAndFeel (&customLookAndFeel); }
-        ~SharedLnf() { juce::LookAndFeel::setDefaultLookAndFeel (nullptr); }
+    juce::Label sizeLabel, dampLabel, widthLabel, mixLabel;
 
-        CustomLookAndFeel customLookAndFeel;
-    };
-
-    juce::SharedResourcePointer<SharedLnf> lnf;
-
+    juce::ButtonParameterAttachment freezeAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> sizeAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> dampAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> widthAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> mixAttachment;
+  
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (HayesReverbAudioProcessorEditor)
 };
