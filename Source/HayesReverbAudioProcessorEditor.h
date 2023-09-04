@@ -21,7 +21,7 @@ public:
 
 private:
     void addAllGUIComponents();
-    
+
     CustomLookAndFeel customLookAndFeel;
 
     HayesReverbAudioProcessor& processor;
