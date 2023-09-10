@@ -1,6 +1,7 @@
 #include "HayesReverbAudioProcessor.h"
 #include "HayesReverbAudioProcessorEditor.h"
 
+
 HayesReverbAudioProcessorEditor::HayesReverbAudioProcessorEditor (HayesReverbAudioProcessor& p, juce::UndoManager& um)
 :   BaseAudioProcessorEditor { p }
 ,   processor            { p }

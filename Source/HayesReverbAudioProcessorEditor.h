@@ -1,13 +1,15 @@
 #pragma once
 
-#include <JuceHeader.h>
-#include "HayesReverbAudioProcessor.h"
 #include "../../Common/BaseAudioProcessorEditor.h"
 #include "../../Common/CustomLookAndFeel.h"
 #include "../../Common/PresetBar.h"
 #include "../../Common/PercentSlider.h"
+
 #include "GUI/FreezeButton.h"
+
+#include "HayesReverbAudioProcessor.h"
 #include "ParamIDs.h"
+
 
 class HayesReverbAudioProcessorEditor  : public BaseAudioProcessorEditor
 {
